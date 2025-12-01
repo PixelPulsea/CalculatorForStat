@@ -1,8 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const string updates = "UPDATES:\nver1.3.5.1 final\n--in ver1.3.2 Bob's name was in lowercase\nver1.3.5 final\n--Bob gets a promotion :D\n  Everyone say *Thank you Bob*!\nver1.3.4\n--very minor change in the mod check\nver1.3.3\n--added STATS for cleaner UI\n--Overall more polished now\nver1.3.2\n--now our buddy Bob is employed :D\nver1.3.1\n--fixed the arithavg giving wrong answer\nver1.3\n--now you can input -1 to quit the calculator\n--the code will now run until you manually close it\nver1.2\n--added support for decimals\n--added binary search & now will print out all mod\n  if there's more than one\nver1.1\n--first full release\n--major bug fixes\n 1) quartile bug fixed\n 2) fixed the logic of the functions\nver1.0\n--release 1.0 \n--main features include:\n  1) calculating mod, median, arithmetic average, and deviation :D";
+const string updates = "UPDATES:\nverFINAL\n--clearing screen is now a proper function\nver1.3.5.1 final\n--in ver1.3.2 Bob's name was in lowercase\nver1.3.5 final\n--Bob gets a promotion :D\n  Everyone say *Thank you Bob*!\nver1.3.4\n--very minor change in the mod check\nver1.3.3\n--added STATS for cleaner UI\n--Overall more polished now\nver1.3.2\n--now our buddy Bob is employed :D\nver1.3.1\n--fixed the arithavg giving wrong answer\nver1.3\n--now you can input -1 to quit the calculator\n--the code will now run until you manually close it\nver1.2\n--added support for decimals\n--added binary search & now will print out all mod\n  if there's more than one\nver1.1\n--first full release\n--major bug fixes\n 1) quartile bug fixed\n 2) fixed the logic of the functions\nver1.0\n--release 1.0 \n--main features include:\n  1) calculating mod, median, arithmetic average, and deviation :D";
 
+void clearScreen(){
+    system("clear");
+}
 //q3calc gets the Q3(upper bound)
 float q3calc(float c[], int sizee){
     if(sizee % 2 == 0){
@@ -57,7 +60,7 @@ int main(){
             cout << "Bye :D" << endl;
             break;
         } else if(n == -2){
-            system("cls");
+            clearScreen();
             cout << updates << endl;
             cout << "=====" << endl;
             cout << "Enter -1 to quit" << endl;
@@ -71,7 +74,7 @@ int main(){
         //putting your numbers into the array
         float b[n];
         for(float &i : b) cin >> i;
-        system("cls");
+        clearScreen();
 
         //Cleans out the screen and shows the numbers you just entered
         cout << "Showing STATS for: " << endl;
